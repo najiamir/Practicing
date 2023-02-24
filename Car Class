@@ -1,0 +1,103 @@
+class Car{
+    constructor(type, productionYear, currentSpeed, maxSpeed, wheelNum, seatNum, currentGas, maxGas ){
+        this.type = type;
+        this.productionYear = productionYear;
+        this.currentSpeed = currentSpeed;
+        this.maxSpeed = maxSpeed;
+        this.wheelNum = wheelNum;
+        this.seatNum = seatNum;
+        this.currentGas = currentGas;
+        this.maxGas = maxGas;
+    }
+//     Ignition Function
+// Prints “Engine started”
+// Prints current gas level.
+
+    ignition() {
+        if (this.currentSpeed > 0) {
+        console.log("Engine is already running!");
+        } else {
+        console.log("Engine started!");
+        console.log("Gas level: " + this.currentGas + " Liters");
+        }
+    }
+  
+        
+        // Start Drive
+        // Prints “all set let’s go”
+        // Current speed changes to 1
+        // Gas level decreases by 1 liter every 10 seconds.
+        //If gas level = 0 the drive ends.
+        
+    startDrive() {
+        console.log("All set, let\'s go!");
+    
+        let command;
+        const gasInterval = setInterval(() => {
+            this.currentGas -= 1;
+        }, 10000);
+    
+        while (command !== "e") {
+            command = prompt("Enter (a)ccelerate (b)rake  (e)nd drive (c)heck gas level:");
+    
+            if (command === "a") {
+            this.accelerate();
+            } else if (command === "b") {
+            this.brake();
+            } else if (command === "c") {
+                console.log("Gas level: " + this.currentGas + " Liters");
+            } else if (command === "e" || this.currentGas === 0) {
+            this.endDrive();
+            }
+        }
+    
+        clearInterval(gasInterval);
+        }
+//             Acceleration
+// Accelerates by prompt 20 units every time till reaches maximum speed.
+
+
+    accelerate = () => {
+        if (this.currentSpeed < this.maxSpeed) {
+            this.currentSpeed += 20;
+            console.log("Current speed is: " + this.currentSpeed);
+            if (this.currentSpeed >= this.maxSpeed) {
+                console.log("Maximum speed reached!");
+            } 
+        }
+    };
+  
+            // Braking
+            // Decreases speed by prompt 20 units every time till reaches 0.
+        
+        
+    brake = () => {
+        if (this.currentSpeed > 0) {
+            this.currentSpeed -= 20;
+            console.log("Current speed is: " + this.currentSpeed);
+            }
+            else{
+                "The car already stopped. "
+            }
+            }
+        
+    
+
+// End Drive
+// Prints “You've reached your destination”
+// sets current speed to 0
+// Prints current gas level.
+
+
+    endDrive(){
+        console.log("You've reached your destination.");
+        console.log("Gas level: " + this.currentGas + " Liters");
+    }
+}
+    
+
+
+
+let nissan = new Car("Nissan", 2022, 0, 180, 4, 5, 15, 35);
+nissan.ignition();
+nissan.startDrive();
