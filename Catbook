@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        display: inline-block;
+      }
+      .image {
+        width: 2px;
+        box-shadow: 50px;
+      }
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .mutual {
+        color: gray;
+        width: 500px;
+        margin-top: 5px;
+      }
+      .button {
+        background-color: rgba(64, 105, 240, 0.979);
+        border:0px;
+        border-radius: 5px;
+        width: 100px;
+        padding: 10px;
+        color: white;
+        margin-top: 10px;
+      }
+      .profile{
+        margin-left: px;
+        margin-right: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        
+        <img src="Practice Divs/max.png" width="300px">\
+         <div class="title">
+          <div class="profile">
+            <img src="Practice Divs/cutedog.jpeg" width="50" style="border-radius: 50%;">
+          </div>
+          <div>
+            Max
+            <div class="mutual">
+              2 mutual friends
+            </div>
+            <button class="button">
+              Add Friend
+            </button>
+          </div>
+         
+          
+          <div>
+           
+          </div>
+        </div>
+      </div>
+    </div> <div class="container">
+      <div class="image">
+        
+        <img src="Practice Divs/cat.png" width="300px">\
+         <div class="title">
+          <div class="profile">
+            <img src="Practice Divs/cutedog.jpeg" width="50" style="border-radius: 50%;">
+          </div>
+          <div>
+            Kitty
+            <div class="mutual">
+              3 mutual friends
+            </div>
+            <button class="button">
+              Add Friend
+            </button>
+          </div>
+         
+          
+          <div>
+           
+          </div>
+        </div>
+      </div>
+    </div> <div class="container">
+      <div class="image">
+        
+        <img src="Practice Divs/mimi.png" width="300px">\
+         <div class="title">
+          <div class="profile">
+            <img src="Practice Divs/cutedog.jpeg" width="50" style="border-radius: 50%;">
+          </div>
+          <div>
+            Mimi
+            <div class="mutual">
+              28 mutual friends
+            </div>
+            <button class="button">
+              Add Friend
+            </button>
+          </div>
+         
+          
+          <div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
